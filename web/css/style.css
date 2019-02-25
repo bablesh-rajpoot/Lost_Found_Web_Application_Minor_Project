@@ -239,6 +239,14 @@ label{
     background:none;
     border: none;
 }
+@media only screen and (max-width: 1920px){
+nav.navbar.navbar-default 
+{
+    
+ padding-left: 5em;
+      
+}
+}
 .navbar {
     margin-bottom: 0;  
     border-radius: 0px;
@@ -281,25 +289,18 @@ label{
 .navbar-nav > li > a {
     margin: 0em 1em;
     padding: 0 .1em;
+    padding-left: 5em;
     
     line-height: 1em;
     text-transform: uppercase;
 }
-.navbar-nav > li:nth-child(3) a {
-    margin-right:1em !important;
-    margin-left: 1em !important;
- 
-}
-.navbar-default .navbar-nav > li:last-child > a {
-    margin-right: 0;
-   
-}
+
 
 .w3_navigation_pos {
     position: absolute;
     top: 30%;
     left: 1%;
-    z-index: 1;
+    z-index: 1%;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -310,7 +311,7 @@ label{
 .w3_navigation_pos a {
     font-size: 1.6em;
     color: #fff;
-    padding-left: 1.7em oem;
+    padding-left: 1.7em 0em;
     text-decoration: none;
     text-transform:uppercase;
     display: inline-block;
@@ -328,23 +329,10 @@ label{
 }
 nav.navbar.navbar-default 
 {
-	padding: 2em 0em;//nav of size
+	padding: 2em 5em;//nav of size
+        
        
         
-}
-@media only screen and (max-width: 1920px) {
- nav.navbar.navbar-default 
-  {
-    padding-left: 15em;
-  }
-}
-@media only screen and (max-width: 320px) {
- nav.navbar.navbar-default  
-  {
-   display: inline;
-   float: none;
-
-  }
 }
 
 
@@ -414,6 +402,80 @@ nav.navbar.navbar-default
 }
 /*-- //banner --*/
 /*--//header--*/
+/* login */
+
+.modal-content {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	pointer-events: auto;
+	border: 10px solid rgba(0, 0, 0, 0.19);
+	border-radius: 0.3rem;
+	outline: 0;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	background: #fff;
+}
+
+.right-w3l input[type="submit"] {
+	background: #ff9108;
+	border: none;
+	color: #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+}
+button.form-control.submit.mb-4{
+    background: #ff9108;
+	border: none;
+	color: #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+}
+.col-form-label{
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #000;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+.modal-header{
+	background: #fff;
+	color: #000;
+	border: none;
+	text-transform: uppercase;
+	margin: 0 auto;
+}
+
+.modal-body{
+	position: relative;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	padding: 1rem;
+
+}
+.model-content.legend
+{
+ color :#000;  
+
+}
+
+/* //modal */
 
 /*-- banner --*/  
 .carousel-caption {
@@ -437,7 +499,7 @@ nav.navbar.navbar-default
 	border-radius:50%;
 }
 .carousel .item{ 
-	background:url(../images/woods.jpg)no-repeat center 0px;
+	background:url(../images/bg4.jpg)no-repeat center 0px;
 	background-size:cover;  
 	height: 760px!important;
 	
@@ -461,7 +523,7 @@ nav.navbar.navbar-default
 	
 } 
 .carousel .item4{ 
-	background:url(../images/mountains.jpg)no-repeat center 0px;
+	background:url(../images/school2.jpg)no-repeat center 0px;
 	background-size:cover;
 	    height: 760px!important;
 	
@@ -511,12 +573,12 @@ nav.navbar.navbar-default
 .modal-content h4 {
     color: #168eea;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: .5em;
+    font-size: 20px;
+   padding-top: 5px;
 }
-.modal-content h5 {
+.modal-content h1 {
     color: #168eea;
-    padding-top: 15px;
+    padding-top: 2px;
     font-size: 22px;
 }
 .modal-content p{
@@ -526,7 +588,7 @@ nav.navbar.navbar-default
 	    padding-top: 10px;
 }
 .modal-header {
-    padding: 30px;
+    padding: 2px;
 }
 /*--//BANNER-BOTTOM--*/
 .main {
@@ -573,11 +635,11 @@ nav.navbar.navbar-default
     font-size: 14px;
     border: 1px solid #E7E7E7;
 }
-#category1 {
+#country1 {
     outline: none;
     width:60%;
     background: #fff;
-    color: #4B4B4B;
+    color: #000000;
     padding:2.5em;
     font-size: 14px;
     border: 1px solid #E7E7E7;
@@ -591,11 +653,11 @@ nav.navbar.navbar-default
 	width:68%;
 	margin: 0.5em 0;
 }
-.agileits_w3layouts_main_gridl input[type="text"],.agileits_w3layouts_main_gridr input[type="time"]{
+.modal-content input[type="text"],.modal-content input[type="time"]{
 	width:90% !important;
 	padding: 2em;
 }
-.agileits_w3layouts_main_gridr input[type="time"] {
+.modal-content input[type="time"] {
     padding: 7.5px !important;
 }
 .agileits_w3layouts_main_gridr{
@@ -661,20 +723,89 @@ nav.navbar.navbar-default
 }
 /*--//BANNER-BOTTOM--*/
 /*--//modal--*/
-/*-- //Banner-Slider --*/
-/*-- reservation --*/
-.agileits_reservation {
+/* I Lost Something*/
+
+.modal-content {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	pointer-events: auto;
+	border: 5px solid rgba(0, 0, 0, 0.19);
+	border-radius: 0.3rem;
+	outline: 0;
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	background: #fff;
+}
+
+.right-w3l input[type="submit"] {
+	background: #ff9108;
+	border: none;
+	color: #000;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+}
+button.form-control.submit.mb-4 {
+    background: #ff9108;
+	border: none;
+	color: #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+}
+.col-form-label {
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #000;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+.modal-header {
+	background: #fff;
+	color: #000;
+	border: 2px solid white;
+        width: 80%;
+	text-transform: uppercase;
+	margin: 0 auto;
+}
+
+.modal-body {
+	position: relative;
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	padding: 1rem;
+}
+
+/* //Lost Something*/
+
+/*-- lost model --*/
+.modal-content {
     margin: -5em auto 0;
     z-index: 999;
     background: #fff;
-    padding: 3em;
+    padding: 1em;
 	-webkit-box-shadow: 0px 1px 8px 0px rgba(24, 24, 23, 0.42);
 	-moz-box-shadow: 0px 1px 8px 0px rgba(24, 24, 23, 0.42); 
     box-shadow: 0px 1px 8px 0px rgba(24, 24, 23, 0.42);
 }
-.agileits_reservation input[type="text"], select#country, select#country1, .phone_email1 input[type="email"] {
+.modal-content input[type="text"], select#country, select#country1, .phone_email1 input[type="email"] {
     width: 100%;
-    color: #9F9F9F;
+    color: #000;
     font-size: 1em;
     padding: 10px 10px 10px 35px;
     outline: none;
@@ -687,37 +818,49 @@ nav.navbar.navbar-default
 .phone_email{
 	float:left;
 }
+.date_btn
+{
+  float: right;  
+}
+.date_btn
+{
+    float: left;
+   
+}
+.date_btn,.date_btn
+{
+  width:48.5%;
+   margin: 1.8em 0;  
+}
 .phone_email,.phone_email1{
 	width:48.5%;
 	margin: 1.8em 0;
 } 
-.cuisine,.book_date,.section_room,.phone_email,.phone_email1 {
+.modal-content.cuisine,.book_date,.section_room,.phone_email,.date_btn ,.date_btn{
     position: relative;
 }
-.span1_of_1{
+.modal-content.span1_of_1{
 	float: left;
 	list-style:none;
-	width:30.9%;
+	width:20%;
 }
-.span1_of_1:nth-child(2) {
+.modal-content.span1_of_1:nth-child(2) {
     margin: 0 1em;
 }
-.agileits_reservation span.glyphicon{
+.modal-content span.glyphicon{
     position: absolute;
     color: #555;
     font-size: 0.9em;
-    top: 1.2em;
+    top: 1em;
     left: 1em;
 }
-.date_btn{
-	margin:2em 0 0;
-}
-.date_btn input[type="submit"] {
+
+.modal-content.date_btn input[type="submit"] {
     text-transform: capitalize;
-    width: 100%;
+    width: 48.5%;
     background: #6199ff;
     color: #ffffff;
-    padding: 12px 0;
+    padding: 10px 10px 10px 35px;
     border: none;
     font-size: 1em;
     outline: none;
@@ -729,14 +872,14 @@ nav.navbar.navbar-default
 	-moz-transition:.5s all; 
 	transition:.5s all;
 }
-.date_btn input[type="submit"]:hover{
+.modal-content.date_btn input[type="submit"]:hover{
 	background: #212121;
 	color:#fff;
 }   
-.agileits_reservation {
+.modal-content {
     width: 40%;
 }
-.agileits_reservation {
+.modal-content{
     width: 40%;
     position: absolute;
     left: 30%;
@@ -1140,7 +1283,7 @@ div#services {
 }
 /*-- //offer-bottom --*/
 /*-- reservation --*/
-.agileits_reservation 
+.agileits_reservation
 {
     
     background: #feffff4d;
@@ -1171,19 +1314,19 @@ div#services {
 .cuisine,.book_date,.section_room,.phone_email,.phone_email1 {
     position: relative;
 }
-.span1_of_1{
+.modal-content.span1_of_1{
 	float: left;
 	list-style:none;
 	width:30.9%;
 }
-.span1_of_1:nth-child(2) {
+.modal-content.span1_of_1:nth-child(2) {
     margin: 0 1em;
 }
 .agileits_reservation span.glyphicon{
     position: absolute;
     color: #555;
     font-size: 0.9em;
-  top: 0.7em;
+    top: 0.7em;
     left: 1em;
 }
 .date_btn{
@@ -2744,9 +2887,9 @@ div#bs-example-navbar-collapse-1 {
 }
 .navbar-nav>li {
     width: 28%;
-    text-align: center;
-    margin: 10px auto;
+    text-align: center;    margin: 10px auto;
 }
+
 .w3_navigation_pos {
     position: static;
     margin-left: 1em;
@@ -3093,3 +3236,7 @@ h5.title-w3 {
     font-size: 20px;
     margin: 9em 0 0px 0;
         }
+ 
+
+     
+ 
