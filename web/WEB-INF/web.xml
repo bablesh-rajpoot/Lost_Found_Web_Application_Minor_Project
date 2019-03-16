@@ -8,6 +8,10 @@
         <servlet-name>LostControllerServlet</servlet-name>
         <servlet-class>LostFound.controller.LostControllerServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LostControllerServlet1</servlet-name>
+        <servlet-class>LostFound.controller.LostControllerServlet1</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MessageControllerServlet</servlet-name>
         <url-pattern>/MessageControllerServlet</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>LostControllerServlet</servlet-name>
         <url-pattern>/LostControllerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LostControllerServlet1</servlet-name>
+        <url-pattern>/LostControllerServlet1</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -32,7 +32,7 @@ public class MessageControllerServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String mob=request.getParameter("mobile");
+        String mob=request.getParameter("phone");
          RequestDispatcher rd=null;
          try
          {

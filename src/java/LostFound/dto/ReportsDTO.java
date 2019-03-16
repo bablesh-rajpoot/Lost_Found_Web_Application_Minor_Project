@@ -5,6 +5,9 @@
  */
 package LostFound.dto;
 
+import java.util.Date;
+import java.util.Objects;
+
 /**
  *
  * @author BABLESH RAJPOOT
@@ -16,9 +19,14 @@ public class ReportsDTO
  private  String item_cat;
  private  String missing_place;
  private  String article_img;
- private  String missing_date;
+ private  Date missing_date;
  private  String item_desc; 
- private  long   item_reward;
+ private  String   item_reward;
+
+    @Override
+    public String toString() {
+        return "ReportsDTO{" + "report_Id=" + report_Id + ", item_Name=" + item_Name + ", item_cat=" + item_cat + ", missing_place=" + missing_place + ", article_img=" + article_img + ", missing_date=" + missing_date + ", item_desc=" + item_desc + ", item_reward=" + item_reward + ", report_type=" + report_type + '}';
+    }
  private String report_type;
 
     public String getReport_Id() {
@@ -27,6 +35,63 @@ public class ReportsDTO
 
     public void setReport_Id(String report_Id) {
         this.report_Id = report_Id;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 47 * hash + Objects.hashCode(this.report_Id);
+        hash = 47 * hash + Objects.hashCode(this.item_Name);
+        hash = 47 * hash + Objects.hashCode(this.item_cat);
+        hash = 47 * hash + Objects.hashCode(this.missing_place);
+        hash = 47 * hash + Objects.hashCode(this.article_img);
+        hash = 47 * hash + Objects.hashCode(this.missing_date);
+        hash = 47 * hash + Objects.hashCode(this.item_desc);
+        hash = 47 * hash + Objects.hashCode(this.item_reward);
+        hash = 47 * hash + Objects.hashCode(this.report_type);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ReportsDTO other = (ReportsDTO) obj;
+        if (!Objects.equals(this.report_Id, other.report_Id)) {
+            return false;
+        }
+        if (!Objects.equals(this.item_Name, other.item_Name)) {
+            return false;
+        }
+        if (!Objects.equals(this.item_cat, other.item_cat)) {
+            return false;
+        }
+        if (!Objects.equals(this.missing_place, other.missing_place)) {
+            return false;
+        }
+        if (!Objects.equals(this.article_img, other.article_img)) {
+            return false;
+        }
+        if (!Objects.equals(this.missing_date, other.missing_date)) {
+            return false;
+        }
+        if (!Objects.equals(this.item_desc, other.item_desc)) {
+            return false;
+        }
+        if (!Objects.equals(this.item_reward, other.item_reward)) {
+            return false;
+        }
+        if (!Objects.equals(this.report_type, other.report_type)) {
+            return false;
+        }
+        return true;
     }
 
     public String getItem_Name() {
@@ -61,11 +126,11 @@ public class ReportsDTO
         this.article_img = article_img;
     }
 
-    public String getMissing_date() {
+    public Date getMissing_date() {
         return missing_date;
     }
 
-    public void setMissing_date(String missing_date) {
+    public void setMissing_date(Date missing_date) {
         this.missing_date = missing_date;
     }
 
@@ -77,11 +142,11 @@ public class ReportsDTO
         this.item_desc = item_desc;
     }
 
-    public long getItem_reward() {
+    public String getItem_reward() {
         return item_reward;
     }
 
-    public void setItem_reward(long item_reward) {
+    public void setItem_reward(String item_reward) {
         this.item_reward = item_reward;
     }
 

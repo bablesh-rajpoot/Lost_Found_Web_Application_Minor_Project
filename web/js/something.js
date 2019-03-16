@@ -1,11 +1,9 @@
 var cattype,place,datepicker,country1,description,file,reward,name,phone,otp,resp;
-    
-   
 $(document).ready(function()
 {
   $("#otp").hide();
   $("#glycon").hide();
-  $("#otpbtn").hide();
+  $("#lostbtn1").hide();
   
   $("#lostbtn").click(function()
   {
@@ -23,6 +21,7 @@ function validate ()
     reward=$("#reward").val();
     name=$("#name").val();
     phone=$("#phone").val();
+   
     var status=true;
     if(cattype==="")
     {
@@ -69,35 +68,23 @@ function validate ()
     {
        $("#sp9").text("This fieid is required.").css("color","red").fadeOut(10000);
        status=false;  
-   }
+    }
           return status;
       
     }
     
-   function valid()
-   {
-    otp=$("#otp").val();
-    var status1=true;
-    if(otp==="")
-    {
-       $("#sp10").text("This fieid is required.").css("color","red").fadeOut(10000);
-       status1=false;    
-    }
-    return status1;
-   }
-   
-   function connect()
-  {
+function connect()
+{
   if(!validate())
     {
      return;
     }
-    $("#otp").show();
-    $("#glycon").show();
-    $("#lostbtn").hide();
-    $("#otpbtn").show();
-    Disabled();
-    phone=$("#phone").val();
+      $("#otp").show();
+      $("#glycon").show();
+      $("lostbtn").hide();
+      $("#lostbtn1").show();
+     Disabled();
+     alert(phone);
     var mydata={phone:phone};
     var request=$.post("essageControllerServlet",mydata,processresponse);
     request.error(handleError);
@@ -110,27 +97,28 @@ function validate ()
 }
     function handleError(xhr,textStatus)
     {
-   if(textStatus==='error')
-   {
+    
+    if(textStatus==='error'){
         $("#loginresult").html("Error is "+xhr.status);
     }
 }
  
- $(document).ready(function()
- {
- $("#otpbtn").click(function()
-  {
-   connect1();
-  }) ;  
-  });
- 
+$(document).ready(function()
+{
+$("#lostbtn1").click(function()
+{
+ connect1();   
+});
+    
+});
   function connect1()
    {
-      if( !valid() && resp.trim()===otp)
+      otp=$("#otp").val();
+      if( !valid() && resp===otp)
       {
           return;
       }
-     
+   
     var form = $('#fileUploadForm')[0];
     var data = new FormData(form); 
     data.append("cattype",cattype);
@@ -141,7 +129,6 @@ function validate ()
     data.append("reward",reward);
     data.append("name",name);
     data.append("phone",phone);
-    $("#otpbtn").attr("value","SUBMIT");
     $.ajax(
     {
             type: "POST",
@@ -168,7 +155,6 @@ function validate ()
    }
    function Disabled()
    {
-       
     $("#cattype").prop("disabled",true);
     $("#place").prop("disabled",true);
 
@@ -188,16 +174,16 @@ function validate ()
 
    }
    
-   function Upload(evt)
+   function pload(evt)
    {
      var tgt = evt.target || window.event.srcElement,
         files = tgt.files;
- if (FileReader && files && files.length) 
- {
+
+    // FileReader support
+    if (FileReader && files && files.length) {
         var fr = new FileReader();
-        fr.onload = function () 
-        {
-         document.getElementById('upload').src = fr.result;
+        fr.onload = function () {
+            document.getElementById('upload').src = fr.result;
         }
         fr.readAsDataURL(files[0]);
     }
